@@ -2,6 +2,8 @@
 
 use App\Providers\RouteServiceProvider;
 use Laravel\Fortify\Features;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 return [
 
@@ -60,8 +62,8 @@ return [
     | and the user is authenticated. You are free to change this value.
     |
     */
-
-    'home' => RouteServiceProvider::HOME,
+    // 'home' => RouteServiceProvider::HOME,
+    'home' => '/',
 
     /*
     |--------------------------------------------------------------------------
