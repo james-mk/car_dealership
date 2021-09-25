@@ -16,14 +16,15 @@ use App\Http\Controllers\HomeController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/',[HomeController::class,'index'])->name('home');
+
+
 Route::group(['middleware' => 'auth'], function () {
+    Route::get('/', [HomeController::class, 'index'])->name('home');
 
 
-
-Route::get('admin/dashboard',AdminDashboard::class)->middleware('checkUserType')->name('admin.dashboard');
-Route::get('employee/dashboard',EmployeeDashboard::class)->middleware('checkUserType')->name('employee.dashboard');
-Route::get('user/dashboard',WebUsersDashboard::class)->middleware('checkUserType')->name('user.dashboard');
+    // Route::get('admin/dashboard',AdminDashboard::class)->middleware('checkUserType')->name('admin.dashboard');
+    // Route::get('employee/dashboard',EmployeeDashboard::class)->middleware('checkUserType')->name('employee.dashboard');
+    // Route::get('user/dashboard',WebUsersDashboard::class)->middleware('checkUserType')->name('user.dashboard');
 
 
 });

@@ -1,6 +1,7 @@
-@extends('layouts.app')
-   
-@section('content')
+<div>
+    @extends('layouts.app')
+
+    @section('content')
     <div>
 
         <!-- Content Header (Page header) -->
@@ -48,4 +49,6 @@
 
     </div>
 
-@endsection
+    @endsection
+
+</div>

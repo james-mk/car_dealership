@@ -1,6 +1,15 @@
+<style>
+    /* .nav-item {
+        display: inline-block !important;
+    }
+    .nav-icon {
+        display: block !important;
+        text-align: right !important;
+    } */
+</style>
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="" class="brand-link">
+    <a href="index3.html" class="brand-link">
         <img src="{{asset('/backend/dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo"
             class="brand-image img-circle elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-light">Sumotrips</span>
@@ -39,7 +48,7 @@
 
             <li class="nav-item">
                 <a href="{{route('home')}}" class="nav-link
-                    {{request()->is('admin/dashboard') ? 'active' : ''}}">
+                    ">
                     <i class="nav-icon fas fa-tachometer-alt"></i>
                     <p>
                         Dashboard
@@ -48,22 +57,48 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href=""
-                    class="nav-link {{request()->is('admin/appointments') ? 'active' : ''}}">
+                <a href="" class="nav-link ">
                     {{-- <i class="nav-icon fas fa-tachometer-alt"></i> --}}
-                    <i class="nav-icon fa fa-calendar" aria-hidden="true"></i>
+                    <i class="nav-icon fa fa-building" aria-hidden="true"></i>
                     <p>
-                        Appointments
+                        Car Listings
 
                     </p>
                 </a>
             </li>
 
-
             <li class="nav-item">
-                <a href="" class="nav-link  {{request()->is('admin/users') ? 'active':''}}">
+                <a href="" class="nav-link
+                   ">
+                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                    <p>
+                        Messages
+
+                    </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link">
                     {{-- <i class="nav-icon fas fa-tachometer-alt"></i> --}}
+                    <i class="nav-icon  fa fa-bicycle" aria-hidden="true"></i>
+                    <p>
+                        Enquiries
+
+                    </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link">
                     <i class="nav-icon fa fa-users" aria-hidden="true"></i>
+                    <p>
+                        Master
+                    </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link">
+                    {{-- <i class="nav-icon fas fa fa-table-alt"></i> --}}
+                    <i class=" nav-icon fa fa-table" aria-hidden="true"></i>
                     <p>
                         Users
 
@@ -72,35 +107,15 @@
             </li>
             <li class="nav-item">
                 <a href="" class="nav-link">
-                    {{-- <i class="nav-icon fas fa-tachometer-alt"></i> --}}
-                    <i class="nav-icon fa fa-cog" aria-hidden="true"></i>
+                    {{-- <i class="nav-icon fas fa fa-table-alt"></i> --}}
+                    <i class=" nav-icon fa fa-table" aria-hidden="true"></i>
                     <p>
                         Settings
 
                     </p>
                 </a>
             </li>
-            <li class="nav-item">
-                <a href=""
-                    class="nav-link {{ request()->is('admin/profile') ? 'active' : '' }}">
-                    <i class="nav-icon fas fa-user"></i>
-                    <p>
-                        Profile
-                    </p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();"
-                        class="nav-link">
-                        <i class="nav-icon fas fa-sign-out-alt"></i>
-                        <p>
-                            Logout
-                        </p>
-                    </a>
-                </form>
-            </li>
+
 
 
         </ul>
