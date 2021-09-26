@@ -6,6 +6,8 @@ use App\Http\Livewire\Admin\AdminDashboard;
 use App\Http\Livewire\Employees\EmployeeDashboard;
 use App\Http\Livewire\WebUsers\WebUsersDashboard;
 use App\Http\Controllers\HomeController;
+use App\Http\Livewire\Master\Master;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,6 +27,8 @@ Route::group(['middleware' => 'auth'], function () {
     // Route::get('admin/dashboard',AdminDashboard::class)->middleware('checkUserType')->name('admin.dashboard');
     // Route::get('employee/dashboard',EmployeeDashboard::class)->middleware('checkUserType')->name('employee.dashboard');
     // Route::get('user/dashboard',WebUsersDashboard::class)->middleware('checkUserType')->name('user.dashboard');
+
+ Route::get('master',Master::class)->name('master');
 
 
 });

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTransmissionsTable extends Migration
+class CreateCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateTransmissionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('transmissions', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->id();
-            $table->string('transmission_name');
+            $table->string('category_name');
+            $table->text('category_desc')->nullable();
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ class CreateTransmissionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('transmissions');
+        Schema::dropIfExists('categories');
     }
 }

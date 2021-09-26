@@ -15,6 +15,8 @@ class CreateDriveTrainsTable extends Migration
     {
         Schema::create('drive_trains', function (Blueprint $table) {
             $table->id();
+            $table->string('drive_train_name');
+            $table->text('drive_train_desc')->nullable();
             $table->timestamps();
         });
     }

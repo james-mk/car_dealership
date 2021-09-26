@@ -5,12 +5,13 @@ namespace App\Models\Master;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class BodyType extends Model
+class Categories extends Model
 {
     use HasFactory;
-    protected $table = 'body_types';
+
+    protected $table = 'categories';
     protected $fillable = [
-        'body_type_name',
-        'body_type_desc',
+        'category_name',
+        'category_desc',
     ];
 }

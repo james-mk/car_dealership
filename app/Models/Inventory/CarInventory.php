@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Models\Master;
+namespace App\Models\Inventory;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Transmission extends Model
+class CarInventory extends Model
 {
     use HasFactory;
 }
