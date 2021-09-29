@@ -1,12 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Middleware\checkUserType;
-use App\Http\Livewire\Admin\AdminDashboard;
-use App\Http\Livewire\Employees\EmployeeDashboard;
-use App\Http\Livewire\WebUsers\WebUsersDashboard;
+// use App\Http\Middleware\checkUserType;
+// use App\Http\Livewire\Admin\AdminDashboard;
+// use App\Http\Livewire\Employees\EmployeeDashboard;
+// use App\Http\Livewire\WebUsers\WebUsersDashboard;
 use App\Http\Controllers\HomeController;
 use App\Http\Livewire\Master\Master;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +29,5 @@ Route::group(['middleware' => 'auth'], function () {
     // Route::get('employee/dashboard',EmployeeDashboard::class)->middleware('checkUserType')->name('employee.dashboard');
     // Route::get('user/dashboard',WebUsersDashboard::class)->middleware('checkUserType')->name('user.dashboard');
 
- Route::get('master',Master::class)->name('master');
-
-
+    Route::get('/master', Master::class)->name('master');
 });
